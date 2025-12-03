@@ -1,0 +1,173 @@
+/* ===========================================================
+   🌈 TAILWIND + ANIMACIONES PERSONALIZADAS
+   Este archivo combina TailwindCSS + tus animaciones
+=========================================================== */
+
+/* 🧱 Importa TailwindCSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================
+   🌟 ANIMACIONES Y EFECTOS GLOBALES
+=========================================================== */
+
+/* 🟢 Suaviza las transiciones */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* ===========================================================
+   🔔 TOASTS (Animaciones)
+=========================================================== */
+@keyframes toast-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: toast-in 0.3s ease-out forwards;
+}
+
+.toast-exit {
+  animation: toast-out 0.3s ease-in forwards;
+}
+
+/* ===========================================================
+   🪟 MODALES
+=========================================================== */
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dialog-enter {
+  animation: modal-fade 0.25s ease-out forwards;
+}
+
+/* ===========================================================
+   🎨 COLORES BASE
+=========================================================== */
+:root {
+  --color-primary: #2563eb;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #facc15;
+}
+
+/* ===========================================================
+   🧩 ESTILOS EXTRA (Botones, Layout)
+=========================================================== */
+button {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+.dialog-backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+/* ===========================================================
+   💅 ESTILO BASE DE LA APLICACIÓN
+=========================================================== */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb; /* Fondo gris claro */
+  color: #111827; /* Texto oscuro */
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ===========================================================
+   🧭 NAVBAR ESTILOS (para tu barra superior)
+=========================================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+nav a {
+  color: #2563eb;
+  font-weight: 500;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================================
+   📱 NUEVO: ANIMACIÓN PARA MENÚ HAMBURGUESA
+   Añadido para el Navbar responsive. No interfiere con nada.
+=========================================================== */
+@keyframes slide-down {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}

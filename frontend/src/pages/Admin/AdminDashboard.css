@@ -1,0 +1,54 @@
+/* PANEL ADMIN — ESTILO GOOD DOGGY  */
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0B6C75;
+  margin-bottom: 30px;
+}
+
+/* GRID DE TARJETAS */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETA */
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  border: 3px solid #FFD29D;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.dashboard-icon {
+  font-size: 55px;
+  color: #FF8F00;
+}
+
+.dashboard-card-title {
+  font-size: 18px;
+  color: #6B6B6B;
+  font-weight: 600;
+}
+
+.dashboard-card-value {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0B6C75;
+}
