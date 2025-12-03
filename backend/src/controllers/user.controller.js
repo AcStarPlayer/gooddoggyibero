@@ -2,7 +2,7 @@
 // 📌 src/controllers/user.controller.js
 // =====================================================
 
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const fs = require("fs");
 const path = require("path");
 const User = require("../models/user.model");
