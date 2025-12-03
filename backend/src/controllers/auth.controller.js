@@ -10,6 +10,7 @@ const User = require("../models/user.model");
 // 📌 REGISTRO DE USUARIO
 // =====================================================
 const register = async (req, res) => {
+  
   try {
     const { name, lastname, email, password, address, phone, documentId } = req.body;
 
