@@ -6,7 +6,12 @@ import axios from "axios";
 
 // 🧩 URL base del backend (Vite usa import.meta.env)
 //const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-const baseURL = `${import.meta.env.VITE_BASE_URL}/api`;
+
+
+//const baseURL = `${import.meta.env.VITE_BASE_URL}/api`;
+
+const baseURL = import.meta.env.VITE_BASE_URL;
+
 //console.log("API_URL:", baseURL);
 console.log("BASE_URL:", baseURL);
 
